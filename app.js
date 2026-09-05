@@ -81,6 +81,7 @@ function initTopbar()
         				LoadLang('loc/'+lang+'.js?v='+Game.version,function(){
         					var launch=function(){
         						Game.Launch();
+        						initTopbar(); // <--- Added this to initialize the top bar elements once launched
         						if (top!=self) Game.ErrorFrame();
         						else
         						{
